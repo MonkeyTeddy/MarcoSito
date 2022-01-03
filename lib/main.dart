@@ -4,6 +4,7 @@ import 'package:marco_sito/layout/layout.dart';
 import 'package:marco_sito/pages/curriculum.dart';
 
 void main() {
+  Get.put(Controller());
   runApp(const MyApp());
 }
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
-      home: SiteLayout(),
+      home: Curriculum(),
     );
   }
 }
