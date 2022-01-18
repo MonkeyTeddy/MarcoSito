@@ -77,14 +77,20 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: BebasNeue
+    - family: Heading_Pro
       fonts:
-        - asset: fonts/BebasNeueRegular-gxj83.ttf
-        - asset: fonts/BebasNeueLight-L3ajy.ttf
-          weight: 200
-        - asset: fonts/BebasNeueBold-7B9LE.ttf
-          weight: 700
-        - asset: fonts/BebasNeueBook-d9A1l.ttf
-          weight: 400
-        - asset: fonts/BebasNeueThin-4B3mY.ttf
+        - asset: fonts/Heading-Pro-Regular.ttf
+        - asset: fonts/Heading-Pro-Thin.ttf
           weight: 100
+        - asset: fonts/Heading-Pro-Extralight.ttf
+          weight: 200
+        - asset: fonts/Heading-Pro-Light.ttf
+          weight: 300
+        - asset: fonts/Heading-Pro-Book.ttf
+          weight: 400
+        - asset: fonts/Heading-Pro-Bold.ttf
+          weight: 600
+        - asset: fonts/Heading-Pro-Extrabold.ttf
+          weight: 700
+        - asset: fonts/Heading-Pro-Heavy.ttf
+          weight: 800

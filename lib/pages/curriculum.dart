@@ -22,46 +22,54 @@ class Curriculum extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'Zaninielli',
-                  style: TextStyle(
-                    fontFamily: 'BebasNeue',
-                    fontWeight: FontWeight.bold,
-                    color: MyPropertys.lightColor,
-                    fontSize: 55,
-                  ),
-                ),
-                Text(
-                  'Marco',
-                  style: TextStyle(
-                    fontFamily: 'BebasNeue',
-                    fontWeight: FontWeight.bold,
-                    color: MyPropertys.lightColor,
-                    fontSize: 55,
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 10.0, vertical: 20.0),
+                  child: FittedBox(
+                    child: Text(
+                      'Zaninielli\nMarco',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Heading_Pro',
+                        fontWeight: FontWeight.bold,
+                        color: MyPropertys.lightColor,
+                        fontSize: 65.0,
+                      ),
+                    ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10.0,
+                    vertical: 20.0,
+                  ),
                   child: RoundImage(
-                    size: 70,
+                    size: 100.0,
                     image: Image.asset('assets/images/Profile.png'),
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'Contatti',
-                  style: GoogleFonts.nunito(
-                    fontSize: 25,
-                    color: Colors.white,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+                  child: FittedBox(
+                    child: Text(
+                      'Via di Sanfontane 6\n'
+                      '38045 Civezzano (TN) Italia\n'
+                      '+39 345 1533 956\n'
+                      'marco@lambstudios.it\n'
+                      'marco.lambstudios.it',
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.lato(
+                        textStyle: const TextStyle(
+                          fontFamily: 'Heading_Pro',
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white,
+                          fontSize: 18.0,
+                          height: 1.3,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-                const LineOfText(text: 'Via di Sanfontane 6'),
-                const LineOfText(text: '38045 Civezzano (TN) Italia'),
-                const LineOfText(text: '+39 345 1533 956'),
-                const TextUrl(text: 'marco.lambstudios.it', url: "http://www.lambstudios.it"),
-                const LineOfText(text: 'marco@lambstudios.it'),
               ],
             ),
           ),
@@ -75,49 +83,5 @@ class Curriculum extends StatelessWidget {
         ),
       ],
     ));
-  }
-}
-
-class LineOfText extends StatelessWidget {
-  final String text;
-
-  const LineOfText({Key? key, required this.text}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: GoogleFonts.nunito(
-        fontSize: 18,
-        color: Colors.white,
-      ),
-    );
-  }
-}
-
-class TextUrl extends StatelessWidget {
-  final String text;
-  final String url;
-
-  const TextUrl({Key? key, required this.text, required this.url}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        text: text,
-        style: GoogleFonts.nunito(
-          fontSize: 18,
-          color: Colors.white,
-        ),
-        recognizer: TapGestureRecognizer()..onTap = () async {
-          if(canLaunch(url) == true){
-            launch(url);
-          }else{
-            print('Culd not lauch URL');
-          }
-        }
-      ),
-    );
   }
 }

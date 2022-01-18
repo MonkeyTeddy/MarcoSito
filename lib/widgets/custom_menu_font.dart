@@ -15,8 +15,8 @@ class CustomMenuFont extends StatelessWidget {
         text,
         style: TextStyle(
           fontSize: 50,
-          fontFamily: 'BebasNeue',
-          fontWeight: FontWeight.bold,
+          fontFamily: 'Heading_Pro',
+          fontWeight: FontWeight.w600,
           color: color,
         ),
       );
